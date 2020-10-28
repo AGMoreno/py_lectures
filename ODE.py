@@ -1,6 +1,6 @@
 import scipy
 from scipy import integrate
-from pylab import *
+import matplotlib.pyplot as plt
 from operator import itemgetter
 
 v = scipy.zeros((4),'d')
@@ -26,7 +26,7 @@ t_start=0.0; t_end=100.0; t_inc=0.1
 t_range = scipy.arange(t_start, t_end+t_inc, t_inc)
 t_course = scipy.integrate.odeint(diff_eqs, [mRNA,gfp], t_range)
 
-plot(t_range, map(itemgetter(0),t_course))
-plot(t_range, map(itemgetter(1),t_course))
-show()
+plt.plot(t_range, list(map(itemgetter(0),t_course)))
+plt.plot(t_range, list(map(itemgetter(1),t_course)))
+plt.show()
 
