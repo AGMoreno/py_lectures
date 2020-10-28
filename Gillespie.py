@@ -1,7 +1,7 @@
 import numpy as np
 import random as r
 import math as m
-from pylab import *
+import matplotlib.pyplot as plt
 
 mRNA=0.0;  gfp=0.0;  P=18.0; 
 k1=1.5;  k4=0.265;  k3=0.65;  k2=2.5; 
@@ -35,8 +35,8 @@ while t < tmax:
     gfprange.append(gfp)
     Prange.append(P)
 
-plot(trange,mRNArange)
-plot(trange,gfprange)
-plot(trange,Prange)
-show()
+plt.plot(trange,mRNArange)
+plt.plot(trange,gfprange)
+plt.plot(trange,Prange)
+plt.show()
 
