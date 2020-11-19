@@ -1,4 +1,5 @@
 # Create toggle switch model
+# https://github.com/ayush9pandey/toggle_switch/blob/master/Project%20presentation.pdf
 from scipy.optimize import fsolve
 from scipy.integrate import odeint, quad
 import numpy as np
